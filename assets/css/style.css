@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    background-color: #def5fa;
+}
+
+.header {
+    padding: 20px;
+    background-color: #037891;
+    color: #ffffff;
+}
+
+.header h1 {
+    display: inline-block;
+    font-size: 48px;
+} 
+
+/*why do I need a comma here*/
+.header header, nav {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-size: 20px;
+}
+
+.header nav ul {
+    list-style-type: none;
+}
+
+.header nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+p {
+    font-size: 16px;
+    padding: 20px;
+}
+/*centers the headings for the two sections */
+.center {
+    text-align: center;
+    padding-top: 50px;
+}
+#emily {
+    height: 150px;
+    float: left;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+#about-me {
+    margin-left: 200px;
+}
+
+.project {
+    height: 200px;
+    width: 300px;
+}
+
+.first-project {
+    padding-top: 25px;
+    height: 300px;
+    width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+figcaption {
+    width: 300px;
+    text-align: center;
+}
