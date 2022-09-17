@@ -2,7 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    border: red 1px solid;
+    /*border: red 1px solid;*/
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -19,10 +19,10 @@ a:link {
 a:hover{
     color: #c0c0e0;
 }
-
+/*ensures links have no line under them*/
 a {
     text-decoration: none;
-    color: #ffffff; 
+    color: #ffffff;
 }
 
 p {
@@ -64,16 +64,18 @@ nav {
     width: 100%;
 }
 
-/*these blocks style the about me section*/
-#about-container {
-    display: flex   ;
-}
-/*heading*/
-#about-me {
+/*these blocks style the about me and my work sections*/
+
+
+/*headings*/
+#about-me, #my-work {
     color: #4080c0;
     margin-left: 200px;
     text-align:justify;
     font-size: 40px;
+}
+
+#about-container {
     display: flex;
 }
 
@@ -89,13 +91,6 @@ nav {
     margin-left: 2px;   
 }
 /*these blocks style the my work section*/
-#my-work {
-    text-align: justify;
-    padding-top: 10px;
-    font-size: 40px;
-    margin-left: 200px;
-    color: #4080c0;
-}
 
 #first-project {
         width: 75%;
@@ -107,9 +102,7 @@ nav {
     width: 75%;
     border: 5px solid #60a0c0;
     display: block;
-   /* text-align: center;*/
     opacity: 1;
-    transition: .5 ease;
     margin-left: auto;
     margin-right: auto;  
     margin-bottom: -18px; 
@@ -135,7 +128,6 @@ nav {
 
 .row {
     content: "";
-    display: ;
     clear: both;
 }
 
@@ -146,7 +138,6 @@ nav {
     margin-left: auto;
     margin-right: auto;
     opacity: 1;
-    transition: .5 ease;
 }
 
 .coming-soon-image:hover {
