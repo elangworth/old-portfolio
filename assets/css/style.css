@@ -2,77 +2,370 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    border: red 1px solid;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body {
-    background-color: #def5fa;
+    background-color: #c0e0e0;
+    min-height: 100vh;
+    width: 100%;
 }
 
-.header {
-    padding: 20px;
-    background-color: #037891;
+a:link {
     color: #ffffff;
 }
 
-.header h1 {
-    display: inline-block;
-    font-size: 48px;
-} 
-
-/*why do I need a comma here*/
-.header header, nav {
-    padding-top: 15px;
-    margin-right: 20px;
-    float: right;
-    font-size: 20px;
+a:hover{
+    color: #c0c0e0;
 }
 
-.header nav ul {
-    list-style-type: none;
-}
-
-.header nav ul li {
-    display: inline-block;
-    margin-left: 25px;
+a {
+    text-decoration: none;
+    color: #ffffff; 
 }
 
 p {
     font-size: 16px;
     padding: 20px;
 }
-/*centers the headings for the two sections */
-.center {
-    text-align: center;
-    padding-top: 50px;
+
+/*these blocks style the header (part of the footer), nav and banner*/
+
+
+/*why does't the color apply to the list elements? my work turns blue if I don't have the color in a{} above*/
+.header, footer {
+    padding: 20px;
+    background-color: #2060a0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
 }
+
+.header h1 {
+    font-size: 48px;   
+} 
+
+nav {
+    padding-top: 15px;
+    font-size: 20px;
+    flex: 1;
+    text-align: right;
+} 
+
+.header nav ul li {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+.banner {
+    height: 100px;
+    width: 100%;
+}
+
+/*these blocks style the about me section*/
+#about-container {
+    display: flex   ;
+}
+/*heading*/
+#about-me {
+    color: #4080c0;
+    margin-left: 200px;
+    text-align:justify;
+    font-size: 40px;
+    display: flex;
+}
+
+#blurb-about-me {
+    display: inline-block;
+}
+/*image of me*/
 #emily {
     height: 150px;
-    float: left;
     border-radius: 50%;
+    border: #4080c0 10px solid;
+    display: inline-block;
+    margin-left: 2px;   
+}
+/*these blocks style the my work section*/
+#my-work {
+    text-align: justify;
+    padding-top: 10px;
+    font-size: 40px;
+    margin-left: 200px;
+    color: #4080c0;
+}
+
+#first-project {
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+#seo-project {
+    width: 75%;
+    border: 5px solid #60a0c0;
+    display: block;
+   /* text-align: center;*/
+    opacity: 1;
+    transition: .5 ease;
+    margin-left: auto;
+    margin-right: auto;  
+    margin-bottom: -18px; 
+}
+
+#seo-project:hover {
+    opacity: .3;
+}
+
+#seo a {
+    color:#4080c0;    
+}
+
+#seo a:hover {
+    color: #c0c0e0;
+}
+
+.column {
+    float: left;
+    width: 50%;
     padding: 10px;
 }
 
-#about-me {
-    margin-left: 200px;
+.row {
+    content: "";
+    display: ;
+    clear: both;
 }
 
-.project {
-    height: 200px;
-    width: 300px;
-}
-
-.first-project {
-    padding-top: 25px;
-    height: 300px;
-    width: 500px;
+.coming-soon-image {
+    width: 50%;
+    border: 5px solid #60a0c0;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    opacity: 1;
+    transition: .5 ease;
 }
 
-figcaption {
-    width: 300px;
+.coming-soon-image:hover {
+    opacity: .3;
+}
+
+section article figure figcaption {
+    color:#4080c0;
     text-align: center;
 }
+
+section article figure figcaption:hover {
+    color: #c0c0e0;
+}
+
+/*these blocks style the footer*/
+
+footer {
+    /*position: fixed;
+    left: 0;
+    bottom: 0;*/
+    width: 100%;
+}
+
+footer h2 {
+    display: inline-block;
+    font-size: 40px;
+}
+
+footer nav ul li {
+    display: inline-block;
+    margin-right: 25px;
+    text-decoration: none;
+} 
+
+
+
+/*This code changes the appearance of the page is the 
+viewing screen is smaller.*/
+
+@media only screen and (max-width: 600px) {
+
+    p, a {
+        font-size: 12px;
+    }
+
+    .header, footer {
+        height: 125px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #ffffff;
+        padding: 0px;
+    }
+
+    .header h1 {
+        font-size: 30px;
+        text-align: center;
+        display: block;
+        padding-top: 3px;
+    }
+   
+    nav{ 
+        padding: 2px;
+    }
+
+    .header nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+.header nav ul li {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    .banner {
+        height: 50px;
+    }
+
+    #about-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #emily {
+        height:100px;
+        width: 100px;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        border: 5px solid #4080c0;
+    }
+
+    #about-me, #my-work, footer h2 {
+        font-size: 25px;
+    }
+
+    #about-me, #my-work {
+        text-align: center;
+        padding: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    #first-project {
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+     #seo-project {
+        width: 100%;
+    }
+
+    .row{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 3px;
+    }
+
+    .column {
+        width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .coming-soon-image {
+        height: 100px;
+    }
+
+    footer {
+        height: 100px;
+    }
+
+    footer h2 {
+        display: inline-block;
+        font-size: 25px;
+        padding-top: 5px;
+    }
+
+    footer nav ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        justify-content: center;
+        padding-top: 5px;
+    }
+
+    footer nav ul li {
+        font-size: 12px;
+        bottom: 15px;
+        white-space: nowrap;    
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 3px;
+    }
+}
+    @media only screen and (max-width: 800px) {
+        .header, footer {
+            height: 125px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #ffffff;
+            padding: 0px;
+        }
+
+        .header h1 {
+            font-size: 30px;
+            text-align: center;
+            display: block;
+            padding-top: 3px;
+        }
+       
+        nav{ 
+            padding: 2px;
+        }
+    
+        .header nav ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+    .header nav ul li {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    footer h2 {
+        display: inline-block;
+        font-size: 25px;
+        padding-top: 5px;
+    }
+
+    footer nav ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        justify-content: center;
+        padding-top: 5px;
+    }
+
+    footer nav ul li {
+        font-size: 12px;
+        bottom: 15px;
+        white-space: nowrap;    
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 3px;
+    }
+
+    }
+
