@@ -22,3 +22,10 @@ THEN I am presented with a responsive layout that adapts to my viewport
 
 #Mock-up
 ![website mock-up](https://github.com/elangworth/portfolio/blob/main/assets/images/mock-up.png?raw=true)
+
+#Deployed Link
+https://elangworth.github.io/portfolio/
+
+#Description
+
+This page has a short biography about me. It has links to projects I have worked on and it displays how to contact me. It features a responsive design.
